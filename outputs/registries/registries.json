@@ -1,0 +1,44 @@
+{
+  "usb_history": [
+    {
+      "device_name": "Disk&Ven_VendorC&Prod_ProductCode&Rev_3.00",
+      "instance": "FC14330C27B99&0",
+      "values": {
+        "DeviceDesc": "@disk.inf,%disk_devdesc%;Disk drive",
+        "Capabilities": 16,
+        "Address": 2,
+        "ContainerID": "{f35bb31b-432c-5c04-988a-2f965c4ec3a3}",
+        "HardwareID": [
+          "USBSTOR\\DiskVendorC_ProductCode_____3.00",
+          "USBSTOR\\DiskVendorC_ProductCode_____",
+          "USBSTOR\\DiskVendorC_",
+          "USBSTOR\\VendorC_ProductCode_____3",
+          "VendorC_ProductCode_____3",
+          "USBSTOR\\GenDisk",
+          "GenDisk",
+          "",
+          ""
+        ],
+        "CompatibleIDs": [
+          "USBSTOR\\Disk",
+          "USBSTOR\\RAW",
+          "GenDisk",
+          "",
+          ""
+        ],
+        "ClassGUID": "{4d36e967-e325-11ce-bfc1-08002be10318}",
+        "Service": "disk",
+        "Driver": "{4d36e967-e325-11ce-bfc1-08002be10318}\\0001",
+        "Mfg": "@disk.inf,%genmanufacturer%;(Standard disk drives)",
+        "FriendlyName": "VendorC ProductCode USB Device",
+        "ConfigFlags": 0
+      }
+    }
+  ],
+  "registries": [
+    {
+      "path": "/Windows/System32/config/SYSTEM",
+      "size": 11272192
+    }
+  ]
+}

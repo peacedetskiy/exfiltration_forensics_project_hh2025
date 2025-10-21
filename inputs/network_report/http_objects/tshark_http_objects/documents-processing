@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/static/styles/base.css">
+        <link rel="shortcut icon" href="/static/images/logo.png">
+        <!--link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet"-->
+        <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"-->
+        <link rel="stylesheet" href="/static/packages/fontawesome/css/all.min.css">
+        
+    <link rel="stylesheet" href="static/styles/documents_processing.css">
+
+
+        <title>eSign</title>
+         
+    </head>
+
+    <body>
+        <div class="sky"></div>
+        <nav class="navbar">
+            <ul class="navbar-list">
+                <li class="logo">
+                    <a href="/">eSign
+                        <i class="logo-bottle">
+                            <img src="/static/images/logo.png" alt="Logo">
+                        </i>
+                    </a>
+                </li>
+                <li class="navbar-central-items"><a href="/home">Home</a></li>
+                <li class="navbar-central-items"><a href="/about">About</a></li>
+                <li class="navbar-central-items"><a href="/contact">Contact</a></li>
+                <li class="navbar-central-items"><a href="/resources">Resources</a></li>
+                
+                    <li class="navbar-right-side-items"><a class="dropdown-toggle-login">Administrator</a></li>
+                
+                <li class="navbar-right-side-items"><a class="dropdown-toggle"><i class="fa fa-gear"></i></a></li>
+            </ul>
+        </nav>
+
+        <div class="gear-dropdown-menu" id="gear-dropdown-menu">
+            <a href="/documents-processing">Process Documents</a>
+            <a href="/documents-signed">Signed Documents</a>
+            <a href="/keys-storage">Keys Storage</a>
+            <a href="/keys-generation">Generate KeyPair</a>
+        </div>
+
+        <div class="login-dropdown-menu" id="login-dropdown-menu">
+            <a href="/profile">Profile</a>
+            <a href="/logout">Log Out</a>
+        </div>
+
+        <div class="alert-container">
+            
+                
+                   
+                      <div class="alert alert-success">
+                          <button type="button" class="m1-2 mb-1 close-alert-button" data-dismiss="alert"
+                                  aria-label="Close" id="close-alert-button">&#10006;</button>
+                          
+                              <i class="fa-solid fa-check-circle fa-beat"></i><strong>Success!</strong>File was successfully uploaded.
+                          
+                      </div>
+                   
+                
+            
+        </div>
+        
+    <div class="keys-storage">
+        <div class="keys-storage-container">
+            <div class="keys-storage-header-and-button">
+                <h1 class="keys-storage-header">Documents Processing</h1>
+                <button class="button-add-keys">Assign Documents</button>
+            </div>
+            
+                <div class="label-box">
+                    <label>Introduction.pdf</label><br>
+                    <div class="button-group">
+                        <form id="download_document_assigned" action="/download-documents-assigned" method="GET">
+                            <input type="hidden" name="document_file_download" value="Introduction.pdf">
+                            <button type="submit" class="button-save"><i class="fas fa-save"></i></button>
+                        </form>
+                        <button type="button" class="button-document" data-document="Introduction.pdf"><i class="fas fa-file-alt"></i></button>
+                        <form id="delete_document_assigned" action="/delete-documents-assigned" method="POST">
+                            <input type="hidden" name="csrf_token" value="Ijg3MGRjOGE2ZjkyMTExMzQ4NWM5NzhiMGIxY2JjZTNiYWQzMGE0M2Ii.aO6ggA.C5rfnCb6dz17KgnZCmR6AE3752g">
+                            <input type="hidden" name="document_file_delete" value="Introduction.pdf">
+                            <button class="button-remove"><i class="fas fa-trash-alt"></i></button>
+                        </form>
+                    </div>
+                </div>
+            
+                <div class="label-box">
+                    <label>sample_report.pdf</label><br>
+                    <div class="button-group">
+                        <form id="download_document_assigned" action="/download-documents-assigned" method="GET">
+                            <input type="hidden" name="document_file_download" value="sample_report.pdf">
+                            <button type="submit" class="button-save"><i class="fas fa-save"></i></button>
+                        </form>
+                        <button type="button" class="button-document" data-document="sample_report.pdf"><i class="fas fa-file-alt"></i></button>
+                        <form id="delete_document_assigned" action="/delete-documents-assigned" method="POST">
+                            <input type="hidden" name="csrf_token" value="Ijg3MGRjOGE2ZjkyMTExMzQ4NWM5NzhiMGIxY2JjZTNiYWQzMGE0M2Ii.aO6ggA.C5rfnCb6dz17KgnZCmR6AE3752g">
+                            <input type="hidden" name="document_file_delete" value="sample_report.pdf">
+                            <button class="button-remove"><i class="fas fa-trash-alt"></i></button>
+                        </form>
+                    </div>
+                </div>
+            
+                <div class="label-box">
+                    <label>Symmetric_Crypto.pdf</label><br>
+                    <div class="button-group">
+                        <form id="download_document_assigned" action="/download-documents-assigned" method="GET">
+                            <input type="hidden" name="document_file_download" value="Symmetric_Crypto.pdf">
+                            <button type="submit" class="button-save"><i class="fas fa-save"></i></button>
+                        </form>
+                        <button type="button" class="button-document" data-document="Symmetric_Crypto.pdf"><i class="fas fa-file-alt"></i></button>
+                        <form id="delete_document_assigned" action="/delete-documents-assigned" method="POST">
+                            <input type="hidden" name="csrf_token" value="Ijg3MGRjOGE2ZjkyMTExMzQ4NWM5NzhiMGIxY2JjZTNiYWQzMGE0M2Ii.aO6ggA.C5rfnCb6dz17KgnZCmR6AE3752g">
+                            <input type="hidden" name="document_file_delete" value="Symmetric_Crypto.pdf">
+                            <button class="button-remove"><i class="fas fa-trash-alt"></i></button>
+                        </form>
+                    </div>
+                </div>
+            
+                <div class="label-box">
+                    <label>Symmetric_Crypto_1.pdf</label><br>
+                    <div class="button-group">
+                        <form id="download_document_assigned" action="/download-documents-assigned" method="GET">
+                            <input type="hidden" name="document_file_download" value="Symmetric_Crypto_1.pdf">
+                            <button type="submit" class="button-save"><i class="fas fa-save"></i></button>
+                        </form>
+                        <button type="button" class="button-document" data-document="Symmetric_Crypto_1.pdf"><i class="fas fa-file-alt"></i></button>
+                        <form id="delete_document_assigned" action="/delete-documents-assigned" method="POST">
+                            <input type="hidden" name="csrf_token" value="Ijg3MGRjOGE2ZjkyMTExMzQ4NWM5NzhiMGIxY2JjZTNiYWQzMGE0M2Ii.aO6ggA.C5rfnCb6dz17KgnZCmR6AE3752g">
+                            <input type="hidden" name="document_file_delete" value="Symmetric_Crypto_1.pdf">
+                            <button class="button-remove"><i class="fas fa-trash-alt"></i></button>
+                        </form>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+    <div id="popup1" class="overlay">
+        <div class="popup">
+            <h2>Upload Private Key</h2>
+            <button class="close">&times;</button>
+            <div class="file-upload">
+                <div class="button-container">
+                    <button class="button-icon" id="uploadButton">
+                        <i class="fas fa-key"></i>
+                    </button>
+                </div>
+                <form id="modal_sign_form" action="/sign-documents" method="POST" enctype="multipart/form-data">
+                    <input type="hidden" name="csrf_token" value="Ijg3MGRjOGE2ZjkyMTExMzQ4NWM5NzhiMGIxY2JjZTNiYWQzMGE0M2Ii.aO6ggA.C5rfnCb6dz17KgnZCmR6AE3752g">
+                    <input type="file" id="upload_keys" name="upload_keys" accept=".key, .pem, .crt, .cer">
+                    <input type="hidden" id="document_file_sign" name="document_file_sign" value="">
+                    <button class="button-save-files" type="submit">Sign the Document</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="popup2" class="overlay2">
+        <div class="popup2">
+            <h2>Assign Document</h2>
+            <button class="close">&times;</button>
+            <div class="file-upload2">
+                <div class="button-container2">
+                    <button class="button-icon2" id="uploadButton2">
+                        <i class="fas fa-file-alt"></i>
+                    </button>
+                </div>
+                <form action="/assign-documents" method="POST" enctype="multipart/form-data">
+                    <input type="hidden" name="csrf_token" value="Ijg3MGRjOGE2ZjkyMTExMzQ4NWM5NzhiMGIxY2JjZTNiYWQzMGE0M2Ii.aO6ggA.C5rfnCb6dz17KgnZCmR6AE3752g">
+                    <input type="file" id="upload_documents" name="upload_documents" accept=".pdf, .doc, .docx">
+                    <button class="button-save-files2" type="submit">Save and assign Document</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+        <script src="/static/scripts/base.js"></script>
+        <!--script src="https://code.jquery.com/jquery-3.2.1.min.js"></script-->
+        <script src="/static/packages/jquery/jquery-3.7.1.js"></script>
+        
+    <script src="static/scripts/documents_processing.js"></script>
+
+    </body>
+</html>
